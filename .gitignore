@@ -1,0 +1,7 @@
+# .gitignore
+vault.pass
+*.pem
+*.retry
+*.log
+*.pyc
+__pycache__/
