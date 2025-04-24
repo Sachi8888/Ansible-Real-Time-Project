@@ -38,6 +38,19 @@ Before starting this project, ensure you have the following:
 sudo apt update && sudo apt install -y ansible python3-pip
 pip install boto boto3 botocore
 ```
+- #### ✅ Setup Vault:
+  1. Create a password for vault:
+     ```
+      openssl rand -base64 2048 > vault.pass
+     ```
+  2.  Add your AWS credentials using the below vault command:
+     ```
+     #To create 
+     ansibile-vault create group_vars/all/pass.yml --vault-password-file vault.pass
+     #To edit
+     ansibile-vault edit group_vars/all/pass.yml --vault-password-file vault.pass
+     
+     ```
 
 ## 📁 Project Structure
 
